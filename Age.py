@@ -1,7 +1,12 @@
 age <- 20
-
-if (age >= 18) {
-  print("You are an adult.")
-} else {
-  print("You are a minor.")
+categorize_age <- function(age) {
+  if (age < 18) {
+    return("Child")
+  } elseif (age < 65) {
+    return("Adult")
+  } else {
+    return("Senior")
+  }
 }
+age_group <- categorize_age(age)
+print(paste("Age Group:", age_group))
